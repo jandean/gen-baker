@@ -17,7 +17,7 @@
         // var csrf_token_hash = "<?php echo $this->security->get_csrf_hash(); ?>";
     </script>
     <script src="<?php echo base_url('javascripts/app/common.js'); ?>"></script>
-    <title>The Maya Baker Site Admin</title>
+    <title>The New Gen Baker Site Admin</title>
 </head>
 
 <body>

@@ -1,4 +1,4 @@
-<h1>The Maya Kitchen Site Admin</h1>
+<h1>The New Gen Baker Site Admin</h1>
 <hr>
 <ul>
 	<li><a href="login.php">Login Page</a></li>
