@@ -1,19 +1,24 @@
-<div>
-    <h6>Social Media</h6>
-    <div class="social">
-        <a href="https://www.facebook.com/Mayakitchen" target="_blank"><span class="icon iconfacebook" aria-hidden="true"></span></a>
-        <a href="https://twitter.com/mayakitchen" target="_blank"><span class="icon icontwitter" aria-hidden="true"></span></a>
-        <a href="http://instagram.com/themayakitchen" target="_blank"><span class="icon iconinstagram" aria-hidden="true"></span></a>
+<div class="newsLetter">
+    <h6>Sign Up For Our Newsletter</h6>
+    <div id="mc_embed_signup">
+    <form action="http://themayakitchen.us3.list-manage.com/subscribe/post?u=093befd519c5e89568e2f86e9&amp;id=cdf613aa70" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <br>
+    <div class="mc-field-group">
+        <label for="mce-EMAIL">Email Address</label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
     </div>
-</div>
-<div class="schedules">
-    <?php if ($classes) : ?>
-        <h6>Class Schedules</h6>
-        <?php foreach ($classes as $row) : ?>
-            <div>
-                <a href="<?php echo base_url('index.php/classes/' . $row->slug); ?>"><strong><?php echo $row->title; ?></strong></a>
-                <?php echo $row->content; ?>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
+    <div class="mc-field-group">
+        <label for="mce-FNAME">First Name </label>
+        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+    </div>
+    <div class="mc-field-group">
+        <label for="mce-LNAME">Last Name </label>
+        <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+    </div>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button orange"></div>
+    </form>
+    </div>
 </div>

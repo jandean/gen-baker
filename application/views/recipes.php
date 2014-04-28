@@ -1,14 +1,20 @@
-<div class="main" id="grid">
-    <h1>RECIPES</h1>
-    <nav class="breadcrumb">
-        <a href="<?php echo base_url(); ?>">The Maya Kitchen</a>
-        <span class="icon iconarrowright" aria-hidden="true"></span><a href="#" class="active" onclick="return false"> Recipes</a>
-    </nav>
+<div class="main topLevel" id="grid">
 
     <?php echo $side; ?>
 
     <div class="core" id="recipes">
+        <?php
+        if (!is_null($feat_content)) :
+            $feat = $featured->row();
+            ?>
+            <div class="feature">
+                <a href="<?php echo base_url('index.php/recipes/' . $feat->slug); ?>"><h3><?php echo $feat->title; ?></h3></a>
+                <img src="<?php echo base_url($this->config->item('image_upload_path') . $feat->image); ?>">
+                <p class="articleContent"><?php echo strtoupper($feat_content->title) . "<br/>" . substr(strip_tags($feat_content->content), 0, 270); ?></p>
+            </div>
+        <?php endif; ?>
         <!-- <h6>November 2013</h6> -->
+        
         <?php if ($recordset) : ?>
             <?php foreach ($recordset as $row) : ?>
             <div class="card">

@@ -59,6 +59,13 @@ class ArticleModel extends CI_Model {
         return $query;
     }
 
+    function get_featured()
+    {
+        $where = array('is_featured' => 1, 'type' => CONTENT_ARTICLE);
+        $query = $this->db->get_where('article', $where);
+        return $query;
+    }
+
     function get_count($type = CONTENT_ARTICLE, $active = 1, $category = null)
     {
         if ($active == 1)

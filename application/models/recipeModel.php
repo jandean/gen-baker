@@ -24,7 +24,7 @@ class RecipeModel extends CI_Model {
         return $query->row();
     }
     
-    function get_entries($id = null, $limit = null, $offset = null, $order_by = null, $active = 1)
+    function get_entries($id = null, $limit = null, $offset = null, $order_by = null, $active = 1, $featured = null)
     {
         if (!is_null($id)) :
             $where['recipe.id'] = $id;
@@ -32,6 +32,8 @@ class RecipeModel extends CI_Model {
             $where = array('category.type' => CATEGORY_RECIPE);
             if ($active == 1)
                 $this->db->where('recipe.is_active', 1);
+            if (!is_null($featured))
+                $this->db->where('recipe.is_featured', $featured);
         endif;
         
         if (!is_null($order_by))

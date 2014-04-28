@@ -106,7 +106,7 @@
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #593C3A;
+  color: #333333;
   font-style: normal;
   font-weight: 400;
   line-height: 23px;
@@ -342,7 +342,7 @@ button, .button {
   width: auto;
   margin: 0;
   padding: 10px 20px 11px;
-  background: #E79F45;
+  background: #7a072e;
   border: none;
   color: #fefefe !important;
   cursor: pointer;
@@ -430,7 +430,7 @@ button.white:hover, button.white:focus, .button.white:hover, .button.white:focus
   clear: both;
   width: 1160px;
   margin: 0 auto;
-  background: #E79F45;
+  background: #7a072e;
   padding: 10px 20px;
   margin-bottom: 20px;
 }
@@ -572,9 +572,9 @@ input, select, textarea {
 }
 /* line 11, ../sass/partials/_forms.scss */
 input:focus, select:focus, textarea:focus {
-  -webkit-box-shadow: 0px 0px 7px #E79F45;
-  -moz-box-shadow: 0px 0px 7px #E79F45;
-  box-shadow: 0px 0px 7px #E79F45;
+  -webkit-box-shadow: 0px 0px 7px #7a072e;
+  -moz-box-shadow: 0px 0px 7px #7a072e;
+  box-shadow: 0px 0px 7px #7a072e;
   outline: none;
 }
 
@@ -656,7 +656,7 @@ fieldset div {
   clear: both;
   width: 1160px;
   margin: 0 auto;
-  color: #E79F45;
+  color: #7a072e;
 }
 /* line 50, ../sass/partials/_grid.scss */
 .siteHead #brand > div:before, .siteHead #brand > div:after {
