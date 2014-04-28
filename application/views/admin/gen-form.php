@@ -12,6 +12,9 @@
 			<label>Slug
 				<input type="text" placeholder="Title-Slug" name="slug" id="slug" value="<?php echo set_value('slug', @$result->slug); ?>" readonly />
 			</label>
+			<label>Description
+				<input type="text" placeholder="Description" name="description" id="description" value="<?php echo set_value('description', @$result->description); ?>" />
+			</label>
 			<label>Content
 				<textarea rows="10" placeholder="Article Content" name="content" id="nicEditArea"><?php echo set_value('content', @$result->content); ?></textarea>
 			</label>

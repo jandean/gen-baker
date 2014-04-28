@@ -67,11 +67,18 @@
             </li><li class="has-dropdown">
                 <a href="#">Blogs</a>
                 <ul class="dropdown">
-                    <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_ARTICLE_STR); ?>">Add Blog</a></li>
-                    <li><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_ARTICLE_STR); ?>">Manage Blogs</a></li>
+                    <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_BLOG_STR); ?>">Add Blog</a></li>
+                    <li><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_BLOG_STR); ?>">Manage Blogs</a></li>
                 </ul>
             </li>
-            <!-- <li class="has-dropdown">
+            <!-- </li><li class="has-dropdown">
+                <a href="#">Articles</a>
+                <ul class="dropdown">
+                    <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_ARTICLE_STR); ?>">Add Article</a></li>
+                    <li><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_ARTICLE_STR); ?>">Manage Articles</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
                 <a href="#">Products</a>
                 <ul class="dropdown">
                     <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_PRODUCT_STR); ?>">Add Product</a></li>

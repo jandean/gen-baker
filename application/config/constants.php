@@ -78,9 +78,11 @@ define('SHOW_DEBUG_BACKTRACE', TRUE);
 define('CONTENT_CLASS_STR', 'class');
 define('CONTENT_ARTICLE_STR', 'article');
 define('CONTENT_PRODUCT_STR', 'product');
+define('CONTENT_BLOG_STR', 'blog');
 define('CONTENT_CLASS', 1);
 define('CONTENT_ARTICLE', 2);
 define('CONTENT_PRODUCT', 3);
+define('CONTENT_BLOG', 4);
 
 define('CATEGORY_RECIPE_STR', 'recipe');
 define('CATEGORY_CLASS_STR', 'class');

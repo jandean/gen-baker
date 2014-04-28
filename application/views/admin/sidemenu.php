@@ -30,6 +30,20 @@ switch ($page) {
 		<?php
 		break;
 
+	case 'blog':
+		?>
+		<aside class="small-2 columns">
+			<div class="sidebar">
+				<ul class="side-nav">
+					<li class="heading"><strong>BLOG</strong></li>
+					<li <?php echo $active == 'add' ? 'class="active"' : ''; ?>><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_BLOG_STR); ?>">+ Add Blog</a></li>
+					<li <?php echo $active == 'main' ? 'class="active"' : ''; ?>><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_BLOG_STR); ?>">All Blogs</a></li>
+				</ul>
+			</div>
+		</aside>
+		<?php
+		break;
+
 	case 'article':
 		?>
 		<aside class="small-2 columns">

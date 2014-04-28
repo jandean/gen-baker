@@ -73,6 +73,7 @@ $route['kids']              = "main/kids_corner";
 $route['classes']           = "main/classes";
 $route['recipes']           = "main/recipes";
 $route['articles']          = "main/articles";
+$route['blogs']          	= "main/blogs";
 $route['products']          = "main/products";
 $route['contact-us']        = "main/contact_us";
 $route['terms-of-use']      = "main/terms_of_use";
@@ -80,6 +81,7 @@ $route['privacy-policy']    = "main/privacy_policy";
 
 $route['classes/(:any)']    = "main/content/classes/$1";
 $route['articles/(:any)']   = "main/content/articles/$1";
+$route['blogs/(:any)']   	= "main/content/blogs/$1";
 $route['products/(:any)']   = "main/content/products/$1";
 $route['recipes/(:any)']    = "main/recipe/$1";
 

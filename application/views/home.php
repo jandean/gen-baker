@@ -16,7 +16,7 @@
                 <img src="<?php echo base_url($this->config->item('image_upload_path') . $feat->image); ?>">
                 <div class="caption">
                     <span><?php echo $feat->title; ?></span>
-                    <a href="<?php echo base_url('index.php/articles/' . $feat->slug); ?>" class="button small teal">Read More</a>
+                    <a href="<?php echo base_url('index.php/blogs/' . $feat->slug); ?>" class="button small teal">Read More</a>
                 </div>
             </div>
         <?php endif; ?>

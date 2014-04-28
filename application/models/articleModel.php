@@ -6,6 +6,7 @@ class ArticleModel extends CI_Model {
     var $type;
     var $title;
     var $slug;
+    var $description;
     var $content;
     var $image;
     var $is_active;
@@ -26,7 +27,7 @@ class ArticleModel extends CI_Model {
         return $query->row();
     }
     
-    function get_entries($type = CONTENT_ARTICLE, $id = null, $limit = null, $offset = null, $order_by = null, $active = 1)
+    function get_entries($type = CONTENT_BLOG, $id = null, $limit = null, $offset = null, $order_by = null, $active = 1, $featured = null)
     {
         if (!is_null($id)) :
             $where = array('id' => $id);
@@ -34,6 +35,8 @@ class ArticleModel extends CI_Model {
             $where = array('type' => $type);
             if ($active == 1)
                 $this->db->where('is_active', 1);
+            if (!is_null($featured))
+                $this->db->where('is_featured', $featured);
         endif;
 
         if (!is_null($order_by))
@@ -61,12 +64,12 @@ class ArticleModel extends CI_Model {
 
     function get_featured()
     {
-        $where = array('is_featured' => 1, 'type' => CONTENT_ARTICLE);
+        $where = array('is_featured' => 1, 'type' => CONTENT_BLOG);
         $query = $this->db->get_where('article', $where);
         return $query;
     }
 
-    function get_count($type = CONTENT_ARTICLE, $active = 1, $category = null)
+    function get_count($type = CONTENT_BLOG, $active = 1, $category = null)
     {
         if ($active == 1)
             $this->db->where('is_active', 1);
@@ -80,7 +83,7 @@ class ArticleModel extends CI_Model {
         return $count;
     }
 
-    function insert_entry($type = CONTENT_ARTICLE)
+    function insert_entry($type = CONTENT_BLOG)
     {
         if ($this->input->post('is_featured') == 1)
             $this->clear_feature($type);
@@ -106,7 +109,7 @@ class ArticleModel extends CI_Model {
         $this->db->delete('article', array('id' => $this->id));
     }
 
-    function update_entry($type = CONTENT_ARTICLE)
+    function update_entry($type = CONTENT_BLOG)
     {
         if ($this->input->post('is_featured') == 1)
             $this->clear_feature($type);
@@ -118,6 +121,7 @@ class ArticleModel extends CI_Model {
         $this->id           = $this->input->post('article_id');
         $this->title        = $this->input->post('title');
         $this->slug         = $this->input->post('slug');
+        $this->description         = $this->input->post('description');
         $this->content      = $this->input->post('content');
         $this->is_active    = $this->input->post('is_active');
         $this->is_featured  = $this->input->post('is_featured');

@@ -24,7 +24,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/template', $this->data);
 	}
 
-    public function main($content_type = CONTENT_CLASS_STR)
+    public function main($content_type = CONTENT_BLOG_STR)
     {
         $type   = $this->getContentTypeId($content_type);
         $limit  = $this->config->item('per_page');
@@ -52,6 +52,10 @@ class Admin extends CI_Controller {
     private function getContentTypeId($content_type)
     {
         switch ($content_type) {
+            case 'blog':
+                return CONTENT_BLOG;
+                break;
+
             case 'class':
                 return CONTENT_CLASS;
                 break;
@@ -66,7 +70,7 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function form($content_type = CONTENT_CLASS_STR, $id = null)
+    public function form($content_type = CONTENT_BLOG_STR, $id = null)
     {
         $type = $this->getContentTypeId($content_type);
 
@@ -85,6 +89,7 @@ class Admin extends CI_Controller {
 
         $this->form_validation->set_rules('article_id', 'ID', 'trim');
         $this->form_validation->set_rules('slug', 'Slug', 'trim|required');
+        $this->form_validation->set_rules('description', 'Description', 'trim|required');
         $this->form_validation->set_rules('content', 'Content', 'trim|required');
         $this->form_validation->set_rules('is_active', 'Active', 'trim');
         $this->form_validation->set_rules('is_featured', 'Featured', 'trim');

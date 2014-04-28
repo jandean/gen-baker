@@ -23,7 +23,7 @@ class Main extends CI_Controller {
         $this->data['side']         = $this->load->view('side', $this->data, true);
         $this->data['recipes']      = $this->recipe_model->get_entries(null, $limit, $offset, $this->order_by)->result();
         $this->data['featured']     = $this->article_model->get_featured();
-        $this->data['blogs']        = $this->article_model->get_entries(CONTENT_ARTICLE, null, $limit, $offset, $this->order_by)->result();
+        $this->data['blogs']        = $this->article_model->get_entries(CONTENT_BLOG, null, $limit, $offset, $this->order_by)->result();
         $this->data['page']         = "home";
         $this->load->view('template', $this->data);
     }
@@ -60,20 +60,21 @@ class Main extends CI_Controller {
         $this->load->view('template', $this->data);
     }
 
-    public function articles()
+    public function blogs()
     {
         $limit  = $this->config->item('per_page');
         $offset = $this->uri->segment(3);
 
-        $config['base_url']     = base_url("index.php/main/articles/");
+        $config['base_url']     = base_url("index.php/main/blogs/");
         $config['total_rows']   = $this->article_model->get_count();
         $config['per_page']     = $this->config->item('per_page');
         $this->pagination->initialize($config);
 
         $this->data['links']        = $this->pagination->create_links();
         $this->data['side']         = $this->common_side;
-        $this->data['recordset']    = $this->article_model->get_entries(CONTENT_ARTICLE, null, $limit, $offset, $this->order_by)->result();
-        $this->data['page']         = "articles";
+        $this->data['featured']     = $this->article_model->get_featured();
+        $this->data['recordset']    = $this->article_model->get_entries(CONTENT_BLOG, null, $limit, $offset, $this->order_by, 1, 0)->result();
+        $this->data['page']         = "blogs";
         $this->load->view('template', $this->data);
     }
 
