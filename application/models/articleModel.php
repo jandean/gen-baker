@@ -91,6 +91,7 @@ class ArticleModel extends CI_Model {
         $this->type         = $type;
         $this->title        = $this->input->post('title');
         $this->slug         = $this->input->post('slug');
+        $this->description  = $this->input->post('description');
         $this->content      = $this->input->post('content');
         $this->is_active    = $this->input->post('is_active');
         $this->is_featured  = $this->input->post('is_featured');

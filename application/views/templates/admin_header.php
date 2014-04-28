@@ -17,7 +17,7 @@
         // var csrf_token_hash = "<?php echo $this->security->get_csrf_hash(); ?>";
     </script>
     <script src="<?php echo base_url('javascripts/app/common.js'); ?>"></script>
-    <title>The Maya Kitchen Site Admin</title>
+    <title>The Maya Baker Site Admin</title>
 </head>
 
 <body>
@@ -51,13 +51,13 @@
                     <li><a href="<?php echo base_url('index.php/users'); ?>">Manage Users</a></li>
                 </ul>
             </li>
-            <li class="has-dropdown">
+            <!-- <li class="has-dropdown">
                 <a href="#">Classes</a>
                 <ul class="dropdown">
                     <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_CLASS_STR); ?>">Add Class</a></li>
                     <li><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_CLASS_STR); ?>">Manage Classes</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li class="has-dropdown">
                 <a href="#">Recipes</a>
                 <ul class="dropdown">
@@ -65,13 +65,13 @@
                     <li><a href="<?php echo base_url('index.php/recipe'); ?>">Manage Recipes</a></li>
                 </ul>
             </li><li class="has-dropdown">
-                <a href="#">Articles</a>
+                <a href="#">Blogs</a>
                 <ul class="dropdown">
-                    <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_ARTICLE_STR); ?>">Add Article</a></li>
-                    <li><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_ARTICLE_STR); ?>">Manage Articles</a></li>
+                    <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_ARTICLE_STR); ?>">Add Blog</a></li>
+                    <li><a href="<?php echo base_url('index.php/admin/main/' . CONTENT_ARTICLE_STR); ?>">Manage Blogs</a></li>
                 </ul>
             </li>
-            <li class="has-dropdown">
+            <!-- <li class="has-dropdown">
                 <a href="#">Products</a>
                 <ul class="dropdown">
                     <li><a href="<?php echo base_url('index.php/admin/form/' . CONTENT_PRODUCT_STR); ?>">Add Product</a></li>
@@ -82,15 +82,15 @@
                 <a href="#">Features</a>
                 <ul class="dropdown">
                     <li><a href="<?php echo base_url('index.php/pages/banner'); ?>">Homepage Banner</a></li>
-                    <!-- <li><a href="">Sidebar Items</a></li> -->
                 </ul>
-            </li>
+            </li> -->
             <li class="has-dropdown">
                 <a href="#">Pages</a>
                 <ul class="dropdown">
                     <li><a href="<?php echo base_url('index.php/pages/contact'); ?>">Contact</a></li>
-                    <li><a href="<?php echo base_url('index.php/pages/terms'); ?>">Terms of Use</a></li>
-                    <li><a href="<?php echo base_url('index.php/pages/policy'); ?>">Privacy Policy</a></li>
+                    <li><a href="<?php echo base_url('index.php/pages/qa'); ?>">Q & A</a></li>
+                    <!-- <li><a href="<?php echo base_url('index.php/pages/terms'); ?>">Terms of Use</a></li>
+                    <li><a href="<?php echo base_url('index.php/pages/policy'); ?>">Privacy Policy</a></li> -->
                 </ul>
             </li>
             </ul>

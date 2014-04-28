@@ -55,12 +55,6 @@ class Main extends CI_Controller {
         $this->data['links']        = $this->pagination->create_links();
         $this->data['side']         = $this->common_side;
         $this->data['featured']     = $this->recipe_model->get_featured();
-        if ($this->data['featured']->num_rows() > 0) :
-            $feat = $this->data['featured']->row();
-            $this->data['feat_content'] = $this->recipe_model->get_contents($feat->id)->row();
-        else :
-            $this->data['feat_content'] = null;
-        endif;
         $this->data['recordset']    = $this->recipe_model->get_entries(null, $limit, $offset, $this->order_by, 1, 0)->result();
         $this->data['page']         = "recipes";
         $this->load->view('template', $this->data);

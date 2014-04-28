@@ -4,13 +4,13 @@
 
     <div class="core" id="recipes">
         <?php
-        if (!is_null($feat_content)) :
+        if ($featured->num_rows() > 0) :
             $feat = $featured->row();
             ?>
             <div class="feature">
                 <a href="<?php echo base_url('index.php/recipes/' . $feat->slug); ?>"><h3><?php echo $feat->title; ?></h3></a>
                 <img src="<?php echo base_url($this->config->item('image_upload_path') . $feat->image); ?>">
-                <p class="articleContent"><?php echo strtoupper($feat_content->title) . "<br/>" . substr(strip_tags($feat_content->content), 0, 270); ?></p>
+                <p class="articleContent"><?php echo $feat->description; ?></p>
             </div>
         <?php endif; ?>
         <!-- <h6>November 2013</h6> -->

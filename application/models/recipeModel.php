@@ -5,6 +5,7 @@ class RecipeModel extends CI_Model {
     var $id;
     var $title;
     var $slug;
+    var $description;
     var $recipe_category_id;
     var $image;
     var $is_active;
@@ -79,10 +80,12 @@ class RecipeModel extends CI_Model {
 
         $this->title                = $this->input->post('title');
         $this->slug                 = $this->input->post('slug');
+        $this->description          = $this->input->post('description');
         $this->recipe_category_id   = $this->input->post('recipe_category_id');
         $this->is_active            = $this->input->post('is_active');
         $this->is_featured          = $this->input->post('is_featured');
         $this->date_created         = date('Y-m-d h:i:s');
+        $this->date_updated         = date('Y-m-d h:i:s');
 
         $this->db->insert('recipe', $this);
         $this->insert_contents($this->db->insert_id());
@@ -120,6 +123,7 @@ class RecipeModel extends CI_Model {
         $this->id                   = $this->input->post('recipe_id');
         $this->title                = $this->input->post('title');
         $this->slug                 = $this->input->post('slug');
+        $this->description          = $this->input->post('description');
         $this->recipe_category_id   = $this->input->post('recipe_category_id');
         $this->is_active            = $this->input->post('is_active');
         $this->is_featured          = $this->input->post('is_featured');

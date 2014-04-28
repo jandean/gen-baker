@@ -54,6 +54,7 @@ class Recipe extends CI_Controller {
         endif;
 
         $this->form_validation->set_rules('slug', 'Slug', 'trim|required');
+        $this->form_validation->set_rules('description', 'Description', 'trim|required');
         $this->form_validation->set_rules('ingredient', 'Ingredient', 'trim|required');
         $this->form_validation->set_rules('procedure', 'Procedure', 'trim|required');
         $this->form_validation->set_rules('yield', 'Yield', 'trim');
