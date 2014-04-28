@@ -99,4 +99,13 @@ class Main extends CI_Controller {
         $this->data['page']     = "static_page";
         $this->load->view('template', $this->data);
     }
+
+    public function qa()
+    {
+        $this->data['title']    = 'Q&A coming soon!';
+        $this->data['side']     = $this->common_side;
+        $this->data['result']   = $this->pages_model->get_entries(PAGE_QA);
+        $this->data['page']     = "static_page";
+        $this->load->view('template', $this->data);
+    }
 }

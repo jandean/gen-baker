@@ -93,6 +93,7 @@ define('PAGE_CONTACT', 1);
 define('PAGE_TERMS', 2);
 define('PAGE_POLICY', 3);
 define('PAGE_BANNER', 4);
+define('PAGE_QA', 5);
 
 define('CLASS_KIDS', 3);
 define('RECIPE_KIDS', 6);

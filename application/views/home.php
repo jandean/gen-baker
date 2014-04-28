@@ -44,7 +44,7 @@
             <?php if ($blogs) : ?>
                 <h6>Latest BakeBlogs</h6>
                 <?php foreach ($blogs as $row) : ?>
-                <a href="<?php echo base_url('index.php/articles/' . $row->slug); ?>">
+                <a href="<?php echo base_url('index.php/blogs/' . $row->slug); ?>">
                     <div class="card text">
                         <h3><?php echo $row->title; ?></h3>
                     </div>

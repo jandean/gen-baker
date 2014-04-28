@@ -40,7 +40,7 @@
                     <a href="<?php echo base_url('index.php/home'); ?>" <?php if ($page=="home") echo " class=\"active\""; ?>><span class="icon iconhome" aria-hidden="true"></span></a>
                     <a href="<?php echo base_url('index.php/recipes'); ?>" <?php if ($page=="recipes" || @$crumb=="recipes") echo " class=\"active\""; ?>>Recipes</a>
                     <a href="<?php echo base_url('index.php/blogs'); ?>" <?php if ($page=="blogs" || @$crumb=="blogs") echo " class=\"active\""; ?>>Blogs</a>
-                    <a href="qa.php" <?php if ($page=="qa") echo " class=\"active\""; ?>>Q&amp;A</a>
+                    <a href="<?php echo base_url('index.php/q-and-a'); ?>" <?php if ($page=="qa") echo " class=\"active\""; ?>>Q&amp;A</a>
                 </nav>  
             </div>
         </div>

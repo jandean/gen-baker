@@ -76,6 +76,7 @@ $route['articles']          = "main/articles";
 $route['blogs']          	= "main/blogs";
 $route['products']          = "main/products";
 $route['contact-us']        = "main/contact_us";
+$route['q-and-a']        	= "main/qa";
 $route['terms-of-use']      = "main/terms_of_use";
 $route['privacy-policy']    = "main/privacy_policy";
 
