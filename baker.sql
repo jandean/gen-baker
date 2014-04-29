@@ -19,8 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `baker`
 --
-CREATE DATABASE IF NOT EXISTS `baker` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `baker`;
+USE `themayak_genbaker`;
 
 -- --------------------------------------------------------
 
@@ -82,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`id`, `type`, `name`, `description`) VALUES
 (1, 2, 'Lifestyle Courses', ''),
-(2, 2, 'Short Courses', '');
+(2, 2, 'Short Courses', ''),
 (4, 1, 'Filipino', ''),
 (5, 1, 'International', '');
 
