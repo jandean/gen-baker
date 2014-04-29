@@ -15,6 +15,8 @@
         </div>
     </footer>
 
+    <script src="<?php echo base_url('javascripts/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('javascripts/app/fbCommon.js'); ?>"></script>
     <script type="text/javascript">
         var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
         try {

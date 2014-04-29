@@ -13,8 +13,8 @@
                 <p class="articleContent"><?php echo $feat->description; ?></p>
                 <div class="social">
                     Share on:
-                    <a href="https://www.facebook.com/sharer.php?t=<?php echo $feat->title; ?>&u=<?php echo current_url(); ?>"  class="button small white"><span class="icon iconfacebook" aria-hidden="true"></span></a>
-                    <a href="http://twitter.com/intent/tweet?text=<?php echo $feat->title; ?>+<?php echo current_url(); ?>" class="button small white"><span class="icon icontwitter" aria-hidden="true"></span></a>
+                    <a data-url="<?php echo current_url(); ?>" data-title="<?php echo $feat->title; ?>" class="button small white fb_share"><span class="icon iconfacebook" aria-hidden="true"></span></a>
+                    <a data-url="<?php echo current_url(); ?>" data-title="<?php echo $feat->title; ?>" class="button small white tweet"><span class="icon icontwitter" aria-hidden="true"></span></a>
                 </div>
             </div>
         <?php endif; ?>
