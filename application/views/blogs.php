@@ -12,6 +12,11 @@
                 <a href="<?php echo base_url('index.php/blogs/' . $feat->slug); ?>"><h3><?php echo $feat->title; ?></h3></a>
                 <img src="<?php echo base_url($this->config->item('image_upload_path') . $feat->image); ?>">
                 <p class="articleContent"><?php echo $feat->description; ?></p>
+                <div class="social">
+                    Share on:
+                    <a href="https://www.facebook.com/sharer.php?t=<?php echo $feat->title; ?>&u=<?php echo current_url(); ?>"  class="button small white"><span class="icon iconfacebook" aria-hidden="true"></span></a>
+                    <a href="http://twitter.com/intent/tweet?text=<?php echo $feat->title; ?>+<?php echo current_url(); ?>" class="button small white"><span class="icon icontwitter" aria-hidden="true"></span></a>
+                </div>
             </div>
         <?php endif; ?>
 
