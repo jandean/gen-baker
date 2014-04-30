@@ -22,7 +22,7 @@
     <header class="siteHead">
         <div id="brand">
             <div>
-                <a href="<?php echo base_url('index.php/home'); ?>"><img class="logo" src="<?php echo base_url('images/logo.png'); ?>"></a>
+                <a href="<?php echo base_url('home'); ?>"><img class="logo" src="<?php echo base_url('images/logo.png'); ?>"></a>
                 <h1>I'm a New Gen Baker</h1>
                 <h4>I'm gonna bake you happy!</h4>
                 <!-- <div class="social">
@@ -32,15 +32,15 @@
                 </div> -->
                 <nav class="small">
                     <a href="bakeshop.php" <?php if ($page=="bakeshop") echo " class=\"active\""; ?> onclick="return false">The Bake Shop <span class="callOut">Soon!</span></a>
-                    <a href="<?php echo base_url('index.php/contact-us'); ?>" <?php if ($page=="contact") echo " class=\"active\""; ?>>Contact Us</a>
+                    <a href="<?php echo base_url('contact-us'); ?>" <?php if ($page=="contact") echo " class=\"active\""; ?>>Contact Us</a>
                     <!-- <a href="about.php" <?php if ($thisPage=="about") echo " class=\"active\""; ?>>About</a> -->
                 </nav>
 
                 <nav class="tabs">
-                    <a href="<?php echo base_url('index.php/home'); ?>" <?php if ($page=="home") echo " class=\"active\""; ?>><span class="icon iconhome" aria-hidden="true"></span></a>
-                    <a href="<?php echo base_url('index.php/recipes'); ?>" <?php if ($page=="recipes" || @$crumb=="recipes") echo " class=\"active\""; ?>>Recipes</a>
-                    <a href="<?php echo base_url('index.php/blogs'); ?>" <?php if ($page=="blogs" || @$crumb=="blogs") echo " class=\"active\""; ?>>Blogs</a>
-                    <a href="<?php echo base_url('index.php/q-and-a'); ?>" <?php if ($page=="qa") echo " class=\"active\""; ?>>Q&amp;A</a>
+                    <a href="<?php echo base_url('home'); ?>" <?php if ($page=="home") echo " class=\"active\""; ?>><span class="icon iconhome" aria-hidden="true"></span></a>
+                    <a href="<?php echo base_url('recipes'); ?>" <?php if ($page=="recipes" || @$crumb=="recipes") echo " class=\"active\""; ?>>Recipes</a>
+                    <a href="<?php echo base_url('blogs'); ?>" <?php if ($page=="blogs" || @$crumb=="blogs") echo " class=\"active\""; ?>>Blogs</a>
+                    <a href="<?php echo base_url('q-and-a'); ?>" <?php if ($page=="qa") echo " class=\"active\""; ?>>Q&amp;A</a>
                 </nav>  
             </div>
         </div>
