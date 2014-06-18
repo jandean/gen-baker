@@ -32,7 +32,7 @@
                 <h6>Latest Recipes</h6>
                 <?php foreach ($recipes as $row) : ?>
                 <div class="card">
-                    <img src="<?php echo base_url($this->config->item('image_upload_path') . $row->image); ?>" width="100%">
+                    <a href="<?php echo base_url('recipes/' . $row->slug); ?>"><img src="<?php echo base_url($this->config->item('image_upload_path') . $row->image); ?>" width="100%"></a>
                     <div>
                         <a href="<?php echo base_url('recipes/' . $row->slug); ?>"><h4><?php echo $row->title; ?></h4></a>
                     </div>
